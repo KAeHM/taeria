@@ -17,6 +17,10 @@ import Link from "next/link";
 
 export default function CharactersLoader() {
     function getAllLocalStorage() {
+        if (typeof window == 'undefined') {
+            return;
+        }
+
         const storageData: { [key: string]: string } = {};
         for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
@@ -29,11 +33,9 @@ export default function CharactersLoader() {
 
     const allLocalStorage = useMemo(getAllLocalStorage, []);
 
-    console.log(allLocalStorage);
-
     return (
         <div className="flex flex-row flex-wrap gap-5">
-            {Object.entries(allLocalStorage).map((value) => {
+            {Object.entries(allLocalStorage || {}).map((value) => {
                 const characterData: CharacterData = JSON.parse(value[1]);
                 const characterID = value[0].split("character-")[1];
 
