@@ -67,6 +67,8 @@ export class Character {
       knowledges: this.knowledges,
       abilities: this.abilities,
       race: this.race,
+      lore: this.lore,
+      inventory: this.inventory,
     };
   }
 

@@ -9,6 +9,7 @@ import CharacterSliderTraits from "@/components/character/character-slider-trait
 import CharacterTraits from "@/components/character/character-traits";
 import { CharacterProvider } from "@/lib/contexts/character/character-context";
 import { Toaster } from "@/components/ui/sonner"
+import CharacterToolsButtons from "@/components/character/character-tools-buttons";
 
 
 
@@ -20,6 +21,9 @@ export default async function CharacterPage({ params }: { params: { id: string }
         <CharacterProvider >
             <CharacterLoader id={id}>
                 <div className="flex flex-col items-center justify-center svh-screen svw-screen py-10 gap-10">
+                    <div className="w-5/6 flex rounded-lg justify-end">
+                        <CharacterToolsButtons />
+                    </div>
                     <div className="w-5/6 border-1 border-neutral-200 rounded-lg p-10">
                         <CharacterHeader />
                     </div>

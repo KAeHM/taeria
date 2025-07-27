@@ -1,4 +1,6 @@
+import { AttributeType } from "../Attributes/Attributes";
 import { Modifier } from "../Modifier/Modifier";
+import { TraitsType } from "../Traits/Traits";
 
 export enum ItemType {
     WEAPON = "Arma",
@@ -25,6 +27,27 @@ export enum ItemQuality {
     EXCELLENT = "Magnífico",
 }
 
+export enum ItemModifierType {
+    ATTRIBUTE = "Atributo",
+    TRAIT = "Traço",
+    ABILITY = "Habilidade",
+}
+
+export interface ItemModifier<T extends ItemModifierType> {
+    name: string;
+    path: {
+        type: T;
+        name: ModifierTypeMap[T];
+    };
+    value: string;
+}
+
+type ModifierTypeMap = {
+    [ItemModifierType.ATTRIBUTE]: AttributeType;
+    [ItemModifierType.TRAIT]: TraitsType;
+    [ItemModifierType.ABILITY]: string;
+};
+
 
 
 export class Item {
@@ -37,11 +60,20 @@ export class Item {
     quality: ItemQuality;
     type: ItemType;
     rarity: ItemRarity;
-    changeAttributes?: Modifier[];
-    changeTraits?: Modifier[];
-    changeAbilities?: Modifier[];
+    itemModifiers: ItemModifier<ItemModifierType>[];
 
-    constructor(name: string, description: string, quantity: number, weight: number, value: number, quality: ItemQuality, type: ItemType, rarity: ItemRarity, isActive: boolean, changeAttributes?: Modifier[], changeTraits?: Modifier[], changeAbilities?: Modifier[]) {
+    constructor(
+        name: string,
+        description: string,
+        quantity: number,
+        weight: number,
+        value: number,
+        quality: ItemQuality,
+        type: ItemType,
+        rarity: ItemRarity,
+        isActive: boolean,
+        itemModifiers: ItemModifier<ItemModifierType>[]
+    ) {
         this.name = name;
         this.description = description;
         this.quantity = quantity;
@@ -51,8 +83,6 @@ export class Item {
         this.type = type;
         this.rarity = rarity;
         this.isActive = isActive;
-        this.changeAttributes = changeAttributes;
-        this.changeTraits = changeTraits;
-        this.changeAbilities = changeAbilities;
+        this.itemModifiers = itemModifiers;
     }
 }
