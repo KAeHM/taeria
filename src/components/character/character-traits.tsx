@@ -58,18 +58,27 @@ export default function CharacterTraits() {
                     </div>
                 </div>
                 <Separator />
-                <div className="flex flex-col justify-between h-full">
-                    <div>
-                        <p>{TraitsType.ActionPoints}</p>
-                        <p>{Modifier.getValue(character.traits.find((trait) => trait.name === TraitsType.ActionPoints)?.value ?? [])}</p>
+                <div className="flex flex-row gap-2 h-full justify-between">
+                    <div className="flex flex-col justify-between h-full">
+                        <div>
+                            <p>{TraitsType.ActionPoints}</p>
+                            <p>{Modifier.getValue(character.traits.find((trait) => trait.name === TraitsType.ActionPoints)?.value ?? [])}</p>
+                        </div>
+                        <div>
+                            <p>{TraitsType.Stealth}</p>
+                            <p>{Modifier.getValue(character.traits.find((trait) => trait.name === TraitsType.Stealth)?.value ?? [])}</p>
+                        </div>
+                        <div>
+                            <p>{TraitsType.Perception}</p>
+                            <p>{Modifier.getValue(character.traits.find((trait) => trait.name === TraitsType.Perception)?.value ?? [])}</p>
+                        </div>
                     </div>
+
                     <div>
-                        <p>{TraitsType.Stealth}</p>
-                        <p>{Modifier.getValue(character.traits.find((trait) => trait.name === TraitsType.Stealth)?.value ?? [])}</p>
-                    </div>
-                    <div>
-                        <p>{TraitsType.Perception}</p>
-                        <p>{Modifier.getValue(character.traits.find((trait) => trait.name === TraitsType.Perception)?.value ?? [])}</p>
+                        <div>
+                            <p>{TraitsType.Damage}</p>
+                            <p>{Modifier.getValue(character.traits.find((trait) => trait.name === TraitsType.Damage)?.value ?? [])}</p>
+                        </div>
                     </div>
                 </div>
             </div>

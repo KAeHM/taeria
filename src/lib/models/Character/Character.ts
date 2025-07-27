@@ -18,7 +18,21 @@ export interface CharacterLoreData {
   imageURL: string;
 }
 
-export class Character {
+export interface CharacterData {
+  id: string;
+  name: string;
+  level: number;
+  xp: number;
+  attributes: Attribute[];
+  traits: Trait[];
+  knowledges: Knowledge[];
+  abilities: string[];
+  race: Race;
+  lore: CharacterLoreData;
+  inventory: Inventory;
+}
+
+export class Character implements CharacterData {
   id: string;
   name: string;
   level: number;
@@ -187,7 +201,7 @@ export class Character {
           new Modifier(
             trait as TraitsType,
             ModifierOrigin.Race,
-            ModifierType.Number,
+            trait == "Percepção" ? ModifierType.Dice : ModifierType.Number,
             HumanoRace.traits[trait as TraitsType],
             TraitFromMock.description
           ),
@@ -196,7 +210,7 @@ export class Character {
           new Modifier(
             trait as TraitsType,
             ModifierOrigin.Race,
-            ModifierType.Number,
+            trait == "Percepção" ? ModifierType.Dice : ModifierType.Number,
             HumanoRace.traits[trait as TraitsType],
             TraitFromMock.description
           ),

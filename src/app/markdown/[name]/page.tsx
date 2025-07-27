@@ -26,7 +26,7 @@ export default async function AbilityPage({ params }: { params: Promise<{ name: 
     const ability = await getAbilityDetails(abilityName);
 
     if (!ability) {
-        return <div>Habilidade não encontrada.</div>;
+        return <div>Markdown não encontrado.</div>;
     }
 
 

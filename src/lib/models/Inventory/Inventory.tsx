@@ -14,7 +14,7 @@ export class Inventory {
     }
 
     static createNewInventory() {
-        return new Inventory([new Item('Moedas', 'Teste', 10, 0.01, 0, ItemQuality.FAIR, ItemType.OTHER, ItemRarity.COMMON, false, [])]);
+        return new Inventory([new Item('Moedas', 'Moeda para trocas em Taeria', 10, 0.01, 0, ItemQuality.FAIR, ItemType.OTHER, ItemRarity.COMMON, false, [])]);
     }
 
 
@@ -101,6 +101,12 @@ export class Inventory {
     updateItem(item: Item, oldName: string): Inventory {
         const newItems = this.items.map(i => i.name === oldName ? item : i);
         return new Inventory(newItems);
+    }
+
+    getInventoryWeight() {
+        return this.items.reduce((prev, current) => {
+            return prev + (current.weight * current.quantity)
+        }, 0)
     }
 
     getItem(name: string) {

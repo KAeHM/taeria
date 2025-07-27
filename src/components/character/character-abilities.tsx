@@ -20,7 +20,7 @@ export default function CharacterAbilities() {
             </div>
 
             <Table>
-                <TableCaption>A list of your recent invoices.</TableCaption>
+                <TableCaption>Lista de Habilidades</TableCaption>
                 <TableHeader>
                     <TableRow>
                         <TableHead className="w-[100px]">Habilidade</TableHead>
@@ -33,7 +33,7 @@ export default function CharacterAbilities() {
                             <TableCell className="font-medium">{abilityName}</TableCell>
                             <TableCell className="text-right">
                                 <Button asChild>
-                                    <Link target="_blank" href={`/abilities/${encodeURIComponent(abilityName)}`}>
+                                    <Link target="_blank" href={`/markdown/${encodeURIComponent(abilityName)}`}>
                                         Ver Mais
                                     </Link>
                                 </Button>

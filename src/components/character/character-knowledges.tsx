@@ -21,6 +21,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+import Link from "next/link";
 
 
 
@@ -40,7 +41,7 @@ export default function CharacterKnowledges() {
             </div>
 
             <Table>
-                <TableCaption>A list of your recent invoices.</TableCaption>
+                <TableCaption>Lista de conhecimentos</TableCaption>
                 <TableHeader>
                     <TableRow>
                         <TableHead className="w-[100px]">Conhecimento</TableHead>
@@ -58,8 +59,10 @@ export default function CharacterKnowledges() {
                             <TableCell>{knowledge.currentXp}</TableCell>
                             <TableCell>{knowledge.attribute}</TableCell>
                             <TableCell className="text-right">
-                                <Button>
-                                    Ver Mais
+                                <Button asChild>
+                                    <Link target="_blank" href={`/markdown/${encodeURIComponent(knowledge.name)}`}>
+                                        Ver Mais
+                                    </Link>
                                 </Button>
                             </TableCell>
                         </TableRow>

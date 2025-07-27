@@ -110,6 +110,7 @@ export const AnaoRace = new Race(
     [TraitsType.SaveThrowPhysical]: "0",
     [TraitsType.SaveThrowMagic]: "0",
     [TraitsType.InventoryCapacity]: "12",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "0",
@@ -133,12 +134,12 @@ export const AscRace = new Race(
     [TraitsType.PhysicalDefense]: "0",
     [TraitsType.MagicDefense]: "4",
     [TraitsType.ActionPoints]: "4",
-
     [TraitsType.SaveThrowSocial]: "0",
     [TraitsType.SaveThrowIntelectual]: "2",
     [TraitsType.SaveThrowPhysical]: "0",
     [TraitsType.SaveThrowMagic]: "2",
     [TraitsType.InventoryCapacity]: "10",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "0",
@@ -167,6 +168,7 @@ export const DurkhanRace = new Race(
     [TraitsType.SaveThrowPhysical]: "0",
     [TraitsType.SaveThrowMagic]: "2",
     [TraitsType.InventoryCapacity]: "10",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "0",
@@ -195,6 +197,7 @@ export const EspectralRace = new Race(
     [TraitsType.SaveThrowPhysical]: "2",
     [TraitsType.SaveThrowMagic]: "0",
     [TraitsType.InventoryCapacity]: "10",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "2",
@@ -223,6 +226,7 @@ export const GalgoroRace = new Race(
     [TraitsType.SaveThrowPhysical]: "2",
     [TraitsType.SaveThrowMagic]: "0",
     [TraitsType.InventoryCapacity]: "16",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "2",
@@ -251,6 +255,7 @@ export const BrakkalRace = new Race(
     [TraitsType.SaveThrowPhysical]: "2",
     [TraitsType.SaveThrowMagic]: "0",
     [TraitsType.InventoryCapacity]: "10",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "2",
@@ -279,6 +284,7 @@ export const SautreRace = new Race(
     [TraitsType.SaveThrowPhysical]: "2",
     [TraitsType.SaveThrowMagic]: "2",
     [TraitsType.InventoryCapacity]: "10",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "2",
@@ -307,6 +313,7 @@ export const HumanoRace = new Race(
     [TraitsType.SaveThrowPhysical]: "2",
     [TraitsType.SaveThrowMagic]: "0",
     [TraitsType.InventoryCapacity]: "10",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "2",
@@ -335,6 +342,7 @@ export const HumanBrakkalRace = new Race(
     [TraitsType.SaveThrowPhysical]: "2",
     [TraitsType.SaveThrowMagic]: "0",
     [TraitsType.InventoryCapacity]: "10",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "2",
@@ -363,6 +371,7 @@ export const HumanDurkhanRace = new Race(
     [TraitsType.SaveThrowPhysical]: "0",
     [TraitsType.SaveThrowMagic]: "2",
     [TraitsType.InventoryCapacity]: "10",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "0",
@@ -391,6 +400,7 @@ export const HumanAnaoRace = new Race(
     [TraitsType.SaveThrowPhysical]: "0",
     [TraitsType.SaveThrowMagic]: "0",
     [TraitsType.InventoryCapacity]: "10",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "0",
@@ -419,6 +429,7 @@ export const HumanGalgoroRace = new Race(
     [TraitsType.SaveThrowPhysical]: "2",
     [TraitsType.SaveThrowMagic]: "0",
     [TraitsType.InventoryCapacity]: "12",
+    [TraitsType.Damage]: "0",
   },
   {
     [AttributeType.Physical]: "2",

@@ -142,7 +142,7 @@ export function CharacterLoreDialog() {
                     </div>
                     <div className="flex flex-col gap-2">
                         <Label>Altura</Label>
-                        <Input name="height" defaultValue={character.lore.height.toString()} type="number" />
+                        <Input name="height" defaultValue={character.lore.height.toString()} type="text" />
                     </div>
                     <div className="flex flex-col gap-2">
                         <Label>Peso</Label>

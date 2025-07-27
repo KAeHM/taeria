@@ -4,6 +4,6 @@ import { redirect } from "next/navigation";
 
 export default function Home() {
 
-  redirect('/characters/1')
+  redirect('/characters')
 
 }

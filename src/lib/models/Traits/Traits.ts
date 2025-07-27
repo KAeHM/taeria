@@ -17,6 +17,7 @@ export enum TraitsType {
   SaveThrowPhysical = "Salva-Guarda Físico",
   SaveThrowMagic = "Salva-Guarda Mágico",
   InventoryCapacity = "Capacidade de Inventário",
+  Damage = "Rolagem de Dano",
 }
 
 export enum ResourceType {
@@ -48,6 +49,7 @@ export const ListTraits = [
   TraitsType.SaveThrowPhysical,
   TraitsType.SaveThrowMagic,
   TraitsType.InventoryCapacity,
+  TraitsType.Damage,
 ];
 
 export class Trait {
@@ -170,6 +172,12 @@ export const InventoryCapacity = new Trait(
   [],
   []
 );
+export const Damage = new Trait(
+  TraitsType.Damage,
+  "Rolagem de Dano do personagem.",
+  [],
+  []
+);
 
 export const TraitList = [
   HitPoints,
@@ -187,4 +195,5 @@ export const TraitList = [
   SaveThrowPhysical,
   SaveThrowMagic,
   InventoryCapacity,
+  Damage,
 ];
