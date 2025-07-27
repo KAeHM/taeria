@@ -25,7 +25,7 @@ export default function CharacterLoader({
         }
 
         setIsLoading(false);
-    }, [id, loadFromLocalStorage]);
+    }, [id]);
 
     if (notFound) {
         return (
