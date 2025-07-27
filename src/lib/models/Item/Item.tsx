@@ -1,5 +1,4 @@
 import { AttributeType } from "../Attributes/Attributes";
-import { Modifier } from "../Modifier/Modifier";
 import { TraitsType } from "../Traits/Traits";
 
 export enum ItemType {

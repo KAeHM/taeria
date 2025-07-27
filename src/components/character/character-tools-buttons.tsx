@@ -9,8 +9,8 @@ export default function CharacterToolsButtons() {
     const { character } = useCharacterContext()
 
     function downloadObjectAsJson(exportObj: Character, characterName: string) {
-        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
-        var downloadAnchorNode = document.createElement('a');
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+        const downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute("href", dataStr);
         downloadAnchorNode.setAttribute("download", characterName + ".json");
         document.body.appendChild(downloadAnchorNode); // required for firefox

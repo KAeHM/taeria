@@ -1,4 +1,4 @@
-import { Modifier, ModifierType } from "../Modifier/Modifier";
+import { Modifier } from "../Modifier/Modifier";
 
 export enum AttributeType {
   Physical = "Físico",

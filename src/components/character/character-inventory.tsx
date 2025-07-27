@@ -45,7 +45,6 @@ import { TraitsType } from "@/lib/models/Traits/Traits";
 import { toast } from "sonner";
 import { AiOutlineEdit } from "react-icons/ai";
 import { FaRegCircleCheck, FaRegCircleXmark } from "react-icons/fa6";
-import { Inventory } from "@/lib/models/Inventory/Inventory";
 
 export default function CharacterInventory() {
     const { character, updateCharacter } = useCharacterContext();

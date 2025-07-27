@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
-import remarkWikiLink from 'remark-wiki-link';
+
 
 async function getAbilityDetails(name: string) {
 
@@ -20,7 +20,7 @@ async function getAbilityDetails(name: string) {
 
 
 
-export default async function AbilityPage({ params }: { params: { name: string } }) {
+export default async function AbilityPage({ params }: { params: Promise<{ name: string }> }) {
     const { name } = await params;
     const abilityName = decodeURIComponent(name);
     const ability = await getAbilityDetails(abilityName);

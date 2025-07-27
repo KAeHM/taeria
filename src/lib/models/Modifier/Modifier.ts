@@ -1,5 +1,3 @@
-import { TraitsType } from "../Traits/Traits";
-
 export enum ModifierType {
   Dice = "DICE",
   Number = "NUMBER",

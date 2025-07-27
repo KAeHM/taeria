@@ -1,5 +1,5 @@
 import { Character } from "../Character/Character";
-import { Modifier, ModifierOrigin, ModifierType } from "../Modifier/Modifier";
+import { Modifier } from "../Modifier/Modifier";
 
 export enum TraitsType {
   HitPoints = "Vitalidade",

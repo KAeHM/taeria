@@ -4,13 +4,11 @@ import {
     TableBody,
     TableCaption,
     TableCell,
-    TableFooter,
     TableHead,
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-import { CharacterContext, useCharacterContext } from "@/lib/contexts/character/character-context";
-import { useContext } from "react";
+import { useCharacterContext } from "@/lib/contexts/character/character-context";
 import { Button } from "../ui/button";
 import { Knowledge, KnowledgeLevel, KnowledgeList } from "@/lib/models/Knowledges/Knowledges";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
